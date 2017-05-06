@@ -1,0 +1,40 @@
+<div class=homepage ng-controller="homeController">
+
+<div class="brand"><span style="color: black">Diamond Candles</span> Ring Reveal<sup>TM</sup></div>
+
+
+<div class="inputBox">
+
+<div ng-show="error" class="revealError">{{error}}</div>
+
+<form ng-hide="loading" ng-submit="reveal(code)">
+
+
+
+<input type="text" placeholder="Reveal Code" ng-model="code">
+
+</form>
+
+<loading active="loading"></loading>
+
+
+</div>
+<div class="inputSubmit" ng-click="reveal(code)">
+
+  Reveal
+
+</div>
+
+<div class="helpContainer">
+
+
+  <video class="mui--hidden-xs" src="/images/background.mp4" autoplay muted loop></video>
+
+  <img class="mui--hidden-xs" src="/images/help.png" alt="">
+  <img class="mobile mui--visible-xs-block" src="/images/help-mobile.png" alt="">
+
+
+</div>
+
+
+</div>

@@ -1,0 +1,77 @@
+<div class="revealPage" ng-controller="revealedController">
+
+
+    <div class="brand">Congratulations You've Won</div>
+
+
+    <div class="tagline" ng-show="!confirm">Before we get your ring, we need to collect a little information first</div>
+    <div class="tagline" ng-show="confirm">Before we get your ring, we need to confirm your information</div>
+
+    <mui-container style="max-width: 500px">
+
+      <loading active="loading"></loading>
+
+
+
+        <div class="value" ng-hide="loading">
+
+
+
+            {{code.value | currency}}
+
+
+        </div>
+
+
+        <form ng-submit="continue(user.name, user.email)">
+
+
+            <mui-row>
+
+                <mui-col md=6>
+                    <mui-input ng-model="user.name.first" hint="First Name" required></mui-input>
+                </mui-col>
+                <mui-col md=6>
+                    <mui-input ng-model="user.name.last" hint="Last Name" required></mui-input>
+                </mui-col>
+
+
+
+            </mui-row>
+
+            <mui-row>
+
+                <mui-col md=12>
+                    <mui-input ng-model="user.email" type="email" hint="Email" required></mui-input>
+                </mui-col>
+
+
+            </mui-row>
+
+
+            <p ng-show="code.value > 100">You've won over $100, which means this money has to be accounted for on your taxes at the end of the year. <b>Clicking continue will redirect you to sign a W9 form.</b> This document must be signed in order to redeem a ring.</p>
+
+
+
+            <div class="center continue">
+
+                <mui-button ng-show="!confirm" variant="raised" color="accent" type="submit">Continue</mui-button>
+                <mui-button ng-show="confirm" variant="raised" color="accent" type="submit">Correct</mui-button>
+
+
+            </div>
+
+
+        </form>
+
+
+
+
+
+
+    </mui-container>
+
+
+
+
+</div>

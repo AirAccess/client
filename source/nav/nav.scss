@@ -1,0 +1,47 @@
+
+$top-height: 40px;
+
+
+nav.titlebar {
+
+background-color: #F5DADF;
+color: #C78692;
+width: 100%;
+height: $top-height;
+line-height: $top-height;
+text-transform: uppercase;
+font-size: 12px;
+
+
+}
+
+nav {
+
+  spotlight {
+    background: #C78692;
+    height: $top-height;
+    color: white;
+    display: inline-block;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  sub-nav{
+    float: right;
+  }
+
+  @media (max-width: 600px) {
+  sub-nav {
+    display: none;
+  }
+
+  spotlight{
+    margin: auto;
+display: block;
+text-align: center;
+width: 100%;
+  }
+}
+
+
+}
